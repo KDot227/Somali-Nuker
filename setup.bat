@@ -9,7 +9,7 @@ pip -v>NUL
 if errorlevel 1 goto errorNoPip
 python -m pip install --upgrade -r requirements.txt
 cls
-main.py
+python -m main.py
 pause
 exit
 
