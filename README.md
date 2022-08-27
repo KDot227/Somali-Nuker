@@ -4,6 +4,8 @@
 
 Somali Nuker is probably the fastest discord nuker that is free. (probably because idk tbh)
 
+Not only is it a nuke bot it also spams prn(9k image database lol), ban all command, kick all command, massdm command (CAN BE USED FOR ADVERTISING TOO!!!), and is just cool! 
+
 # How to use
 
 ## step 1.) 
@@ -67,4 +69,4 @@ I made this project because my dad originated from somalia and I think he is a g
 
 FINAL STEP
 
-listen to [this](https://open.spotify.com/album/4eLPsYPBmXABThSJ821sqY?si=319c89f639594af7)
+NEVER click worms and listen to [this](https://open.spotify.com/album/4eLPsYPBmXABThSJ821sqY?si=319c89f639594af7)
