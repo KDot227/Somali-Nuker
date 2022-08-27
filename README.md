@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/110929758/187009929-18b79f5d-3e33-4f49-92e6-cfab280c9939.png)
+
 # Somali Nuker
 
 Somali Nuker is probably the fastest discord nuker that is free. (probably because idk tbh)
