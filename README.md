@@ -24,16 +24,18 @@ You can either join the [discord](https://discord.gg/3ZqvaCz6zj) OR USE THIS CRA
  
 ## Config
 
-```python
-TOKEN = '' #ur BOT token here
-CHANNEL_NAMES = 'K.Dot#0001' #name of the created channels
-MESSAGE = '@everyone K.Dot#0001 was here! ' #message u want ALSO make sure there is a space at the end if your using spam_prn
-PREFIX = 'god ' #ur prefix
-AMMOUNT_OF_CHANNELS = 30 #lol you can go more if u got a good pc
-SERVER_NAME = 'KDot better' #mad facts cuz
-SPAM_PRN = True #hehehehehehehehehehe
-PROXIES = False #no proxies is a LOT faster but u can get ratelimited faster sometimes so its up to u ALSO PROXIES WILL MESS UP CONSOLE LMAO
-LESS_RATE_LIMIT = False #TURN TO TRUE IF YOU WANT TO GET RATE LIMITED LESS. PROXIES IS STILL BETTER THO
+```json
+{
+    "TOKEN": "YOUR BOT TOKEN HERE",
+    "LESS_RATE_LIMIT": true,
+    "PROXIES": true,
+    "SPAM_PRN": true,
+    "SERVER_NAME": "KDot better",
+    "AMMOUNT_OF_CHANNELS": "30",
+    "PREFIX": "god ",
+    "MESSAGE": "@everyone K.Dot#0001 was here! ",
+    "CHANNEL_NAMES": "K.Dot"
+    }
 ```
 
 ## Contributing
