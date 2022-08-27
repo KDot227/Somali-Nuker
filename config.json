@@ -1,8 +1,8 @@
 {
     "TOKEN": "",
-    "LESS_RATE_LIMIT": "True",
-    "PROXIES": "True",
-    "SPAM_PRN": "True",
+    "LESS_RATE_LIMIT": true,
+    "PROXIES": true,
+    "SPAM_PRN": true,
     "SERVER_NAME": "KDot better",
     "AMMOUNT_OF_CHANNELS": "30",
     "PREFIX": "god ",
