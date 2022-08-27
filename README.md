@@ -25,6 +25,7 @@ Go to this [link](https://discord.com/developers/applications) and press new app
 
 ![Screenshot](util/step-4.png)
 
+copy link and paste it in browser to invite bot!
 ## step 7.)
 
 Change the bot token and other configs
