@@ -54,6 +54,10 @@ LESS_RATE_LIMIT = False #TURN TO TRUE IF YOU WANT TO GET RATE LIMITED LESS. PROX
 
 PLEASE MAKE PULL REQUESTS IF YOU THINK YOU CAN ADD OR FIX SOMETHING!!!
 
+# Still need help?
+
+here is my [server](https://discord.gg/3ZqvaCz6zj) just join and let us know if u got any questions!
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
