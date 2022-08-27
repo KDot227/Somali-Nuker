@@ -34,7 +34,7 @@ Change the bot token and other configs
 
 ## step 8.) 
 
-run setup.bat and have fun
+run setup.bat and say god help in the same server the bot is in for the help menu
 
 ## Config
 
