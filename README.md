@@ -21,6 +21,10 @@ Don't know where intents are? look at the screenshot below!
 Have any other questions? 
 
 You can either join the [discord](https://discord.gg/3ZqvaCz6zj) OR USE THIS CRAZY THING CALLED GOOGLE?!?!?!?!
+
+# Don't have python or having other issues?
+
+Go to the releases section and download the built version. I highly recommend using the source code if possible!!!
  
 ## Config
 
