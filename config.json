@@ -1,5 +1,5 @@
 {
-    "TOKEN": "",
+    "TOKEN": "YOUR BOT TOKEN HERE",
     "LESS_RATE_LIMIT": true,
     "PROXIES": true,
     "SPAM_PRN": true,
