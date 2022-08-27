@@ -3,9 +3,7 @@ import discord
 from discord import Permissions
 from discord.ext import commands
 from util.proxies import proxy_scrape, proxy
-from time import sleep
 import os
-from random import randint
 import random
 import threading
 import time
