@@ -12,22 +12,24 @@ import time
 import requests
 from pystyle import *
 import sys
+import json
 
 __author__ = 'K.Dot#0001'
+__version__ = '1.0.0'
 
-#===================CONFIG===================#
+with open('config.json', 'r') as f:
+    config = json.load(f)
+    TOKEN = config["TOKEN"]
+    CHANNEL_NAMES = config["CHANNEL_NAMES"]
+    MESSAGE = config["MESSAGE"]
+    PREFIX = config["PREFIX"]
+    AMMOUNT_OF_CHANNELS = config["AMMOUNT_OF_CHANNELS"]
+    SERVER_NAME = config["SERVER_NAME"]
+    SPAM_PRN = config["SPAM_PRN"]
+    PROXIES = config["PROXIES"]
+    LESS_RATE_LIMIT = config["LESS_RATE_LIMIT"]
 
-TOKEN = '' #ur BOT token here
-CHANNEL_NAMES = 'K.Dot#0001' #name of the created channels
-MESSAGE = '@everyone K.Dot#0001 was here! ' #message u want ALSO make sure there is a space at the end if your using spam_prn
-PREFIX = 'god ' #ur prefix
-AMMOUNT_OF_CHANNELS = 3 #lol you can go more if u got a good pc
-SERVER_NAME = 'KDot better' #mad facts cuz
-SPAM_PRN = True #hehehehehehehehehehe
-PROXIES = True #no proxies is a LOT faster but u can get ratelimited faster sometimes so its up to u ALSO PROXIES WILL MESS UP CONSOLE LMAO
-LESS_RATE_LIMIT = True #TURN TO TRUE IF YOU WANT TO GET RATE LIMITED LESS. PROXIES IS STILL BETTER THO
 
-#===================CONFIG===================#
 
 banner = Center.XCenter("""
  ██████╗  ██████╗ ██████╗ ███████╗ █████╗ ████████╗██╗  ██╗███████╗██████╗ 
