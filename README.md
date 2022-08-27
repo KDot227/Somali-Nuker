@@ -8,36 +8,20 @@ Not only is it a nuke bot it also spams prn(9k image database lol), ban all comm
 
 # How to use
 
-## step 1.) 
+## Step 1.) 
 
-Press the green code button and press download zip
+Get the bot token and replace it. Also enable all intents
 
-## step 2.) 
+Don't know how to get bot token? go [here](https://www.writebots.com/discord-bot-token/)
 
-Go to this [link](https://discord.com/developers/applications) and press new application as seen in the picture 
-![Screenshot](util/step-1.png)
+Don't know where intents are? look at the screenshot below!
 
-## step 3.)
+![screenshot](https://user-images.githubusercontent.com/110929758/187050986-0455c1fc-fd15-4026-9297-e346342de5b5.png)
 
-![Screenshot](util/step-2.png)
+Have any other questions? 
 
-## step 4.)
-
-![Screenshot](util/step-3.png)
-
-## step 6.)
-
-![Screenshot](util/step-4.png)
-
-copy link and paste it in browser to invite bot!
-## step 7.)
-
-Change the bot token and other configs
-
-## step 8.) 
-
-run setup.bat and say god help in the same server the bot is in for the help menu
-
+You can either join the [discord](https://discord.gg/3ZqvaCz6zj) OR USE THIS CRAZY THING CALLED GOOGLE?!?!?!?!
+ 
 ## Config
 
 ```python
