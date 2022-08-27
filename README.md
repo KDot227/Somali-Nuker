@@ -41,7 +41,7 @@ run setup.bat and say god help in the same server the bot is in for the help men
 ## Config
 
 ```python
-TOKEN = 'MTAxMTI3OTg0NzMwNzM0NTk3MA.GkFYwY.5BDKxKyw1xv5ftYEMBOjHJMZNw2CxovC2THNsk' #ur BOT token here
+TOKEN = '' #ur BOT token here
 CHANNEL_NAMES = 'K.Dot#0001' #name of the created channels
 MESSAGE = '@everyone K.Dot#0001 was here! ' #message u want ALSO make sure there is a space at the end if your using spam_prn
 PREFIX = 'god ' #ur prefix
