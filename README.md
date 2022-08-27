@@ -11,19 +11,19 @@ Press the green code button and press download zip
 ## step 2.) 
 
 Go to this [link](https://discord.com/developers/applications) and press new application as seen in the picture 
-![Screenshot](utils/step-1.png)
+![Screenshot](util/step-1.png)
 
 ## step 3.)
 
-![Screenshot](utils/step-2.png)
+![Screenshot](util/step-2.png)
 
 ## step 4.)
 
-![Screenshot](utils/step-3.png)
+![Screenshot](util/step-3.png)
 
 ## step 6.)
 
-![Screenshot](utils/step-4.png)
+![Screenshot](util/step-4.png)
 
 ## step 7.)
 
