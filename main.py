@@ -11,6 +11,7 @@ import requests
 from pystyle import *
 import sys
 import json
+import hmtai
 
 __author__ = 'K.Dot#0001'
 __version__ = '1.0.0'
@@ -127,14 +128,187 @@ async def help(ctx):
     embedVar.add_field(name="Instructions", value=f'''
 Different Help commands
 
-{PREFIX} nuke
-{PREFIX} ban_all
-{PREFIX} kick_all
-{PREFIX} massdm
+{PREFIX}nuke
+{PREFIX}ban_all
+{PREFIX}kick_all
+{PREFIX}massdm
+{PREFIX}SFW
 
 ''', inline=True)
     embedVar.set_footer(text = 'Made by K.Dot#0001')
     await ctx.send(embed=embedVar)
+
+@client.command()
+async def SFW(ctx):
+	embedVar = discord.Embed(title="god hmSFW", color=0x00ff00)
+	embedVar.set_thumbnail(url='https://cdn.discordapp.com/attachments/988338446802231297/993402633261953054/worms1.png')
+	embedVar.add_field(name="hmSFW", value='''
+god wave
+god tea
+god punch
+god poke
+god pat
+god kiss
+god feed
+god hug
+god cuddle
+god cry
+god slap
+god lick
+god bite
+god dance
+god boop
+god sleep
+god like
+god kill
+god nosebleed
+god threaten
+god tickle
+god depression
+god jahy_arts
+god neko_arts
+god coffee_arts
+god wallpaper
+god mobileWallpaper''', inline=True)
+	embedVar.set_footer(text = 'Made by K.Dot#0001')
+	embedVar.set_image(url='https://cdn.discordapp.com/attachments/994421993023750234/995126254149828649/81B4800E-1B06-44AE-834D-ADB3BD85DFDC.png')
+	await ctx.send(embed=embedVar)
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def wave(ctx):
+	await ctx.send(hmtai.get("hmtai", "wave"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def tea(ctx):
+	await ctx.send(hmtai.get("hmtai", "tea"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def punch(ctx):
+	await ctx.send(hmtai.get("hmtai", "punch"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def poke(ctx):
+	await ctx.send(hmtai.get("hmtai", "poke"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def pat(ctx):
+	await ctx.send(hmtai.get("hmtai", "pat"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def kiss(ctx):
+	await ctx.send(hmtai.get("hmtai", "kiss"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def feed(ctx):
+	await ctx.send(hmtai.get("hmtai", "feed"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def hug(ctx):
+	await ctx.send(hmtai.get("hmtai", "hug"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def cuddle(ctx):
+	await ctx.send(hmtai.get("hmtai", "cuddle"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def cry(ctx):
+	await ctx.send(hmtai.get("hmtai", "cry"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def slap(ctx):
+	await ctx.send(hmtai.get("hmtai", "slap"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def lick(ctx):
+	await ctx.send(hmtai.get("hmtai", "lick"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def bite(ctx):
+	await ctx.send(hmtai.get("hmtai", "bite"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def dance(ctx):
+	await ctx.send(hmtai.get("hmtai", "dance"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def boop(ctx):
+	await ctx.send(hmtai.get("hmtai", "boop"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def sleep(ctx):
+	await ctx.send(hmtai.get("hmtai", "sleep"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def like(ctx):
+	await ctx.send(hmtai.get("hmtai", "like"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def kill(ctx):
+	await ctx.send(hmtai.get("hmtai", "kill"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def nosebleed(ctx):
+	await ctx.send(hmtai.get("hmtai", "nosebleed"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def threaten(ctx):
+	await ctx.send(hmtai.get("hmtai", "threaten"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def tickle(ctx):
+	await ctx.send(hmtai.get("hmtai", "tickle"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def depression(ctx):
+	await ctx.send(hmtai.get("hmtai", "depression"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def jahy_arts(ctx):
+	await ctx.send(hmtai.get("hmtai", "jahy_arts"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def neko_arts(ctx):
+	await ctx.send(hmtai.get("hmtai", "neko_arts"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def coffee_arts(ctx):
+	await ctx.send(hmtai.get("hmtai", "coffee_arts"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def wallpaper(ctx):
+	await ctx.send(hmtai.get("hmtai", "wallpaper"))
+
+@client.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def mobileWallpaper(ctx):
+	await ctx.send(hmtai.get("hmtai", "mobileWallpaper"))
+
 
 def spamhookp(hook):
     for i in range(5):
