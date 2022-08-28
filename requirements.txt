@@ -2,3 +2,4 @@ colorama
 discord.py
 pystyle
 requests
+hmtai
