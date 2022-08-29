@@ -361,4 +361,6 @@ if __author__ != '\x4b\x2e\x44\x6f\x74\x23\x30\x30\x30\x31':
 try:
     client.run(TOKEN)
 except:
-    print('Invalid Token or other error')
+    print('Invalid Token or INTENTS ARE NOT ENABLED\n Please fix or else bot will not function!')
+    time.sleep(10)
+    os._exit(0)
