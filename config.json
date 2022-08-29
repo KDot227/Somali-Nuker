@@ -1,6 +1,6 @@
 {
     "TOKEN": "YOUR BOT TOKEN HERE",
-    "LESS_RATE_LIMIT": true,
+    "LESS_RATE_LIMIT": false,
     "PROXIES": true,
     "SPAM_PRN": true,
     "SERVER_NAME": "KDot better",
