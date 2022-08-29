@@ -311,42 +311,44 @@ async def mobileWallpaper(ctx):
 
 
 def spamhookp(hook):
-    for i in range(5):
-        for i in range(4):
-            if SPAM_PRN == True:
-                try:
-                    requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))}, proxies=proxy())
-                except:
-                    print(f'error spamming! {hook}')
-            else:
-                try:
-                    requests.post(hook, data={'content': MESSAGE}, proxies=proxy())
-                except:
-                    print(f'error spamming! {hook}')
-            if LESS_RATE_LIMIT == False:
-                continue
-            else:
-                time.sleep(0.2)
-    sys.exit()
+    damn = 0
+    while damn == 0:
+        if SPAM_PRN == True:
+            try:
+                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))}, proxies=proxy())
+            except:
+                print(f'error spamming! {hook}')
+                sys.exit()
+        else:
+            try:
+                requests.post(hook, data={'content': MESSAGE}, proxies=proxy())
+            except:
+                print(f'error spamming! {hook}')
+                sys.exit()
+        if LESS_RATE_LIMIT == False:
+            continue
+        else:
+            time.sleep(0.2)
         
 def spamhook(hook):
-    for i in range(5):
-        for i in range(4):
-            if SPAM_PRN == True:
-                try:
-                    requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))})
-                except:
-                    print(f'error spamming! {hook}')
-            else:
-                try:
-                    requests.post(hook, data={'content': MESSAGE})
-                except:
-                    print(f'error spamming! {hook}')
-            if LESS_RATE_LIMIT == False:
-                continue
-            else:
-                time.sleep(0.2)
-    sys.exit()
+    damn = 0
+    while damn == 0:
+        if SPAM_PRN == True:
+            try:
+                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))})
+            except:
+                print(f'error spamming! {hook}')
+                sys.exit()
+        else:
+            try:
+                requests.post(hook, data={'content': MESSAGE})
+            except:
+                print(f'error spamming! {hook}')
+                sys.exit()
+        if LESS_RATE_LIMIT == False:
+            continue
+        else:
+            time.sleep(0.2)
 
 if PROXIES == True:
     proxy_scrape()
