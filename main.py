@@ -26,7 +26,6 @@ with open('config.json', 'r') as f:
     SERVER_NAME = config["SERVER_NAME"]
     SPAM_PRN = config["SPAM_PRN"]
     PROXIES = config["PROXIES"]
-    LESS_RATE_LIMIT = config["LESS_RATE_LIMIT"]
 
 
 
