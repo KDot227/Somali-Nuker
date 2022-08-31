@@ -7,6 +7,7 @@ python --version 3>NUL
 if errorlevel 1 goto errorNoPython
 pip -v>NUL
 if errorlevel 1 goto errorNoPip
+pip uninstall discord.py-self
 python -m pip install --upgrade -r requirements.txt
 cls
 python -m main.py
