@@ -31,7 +31,6 @@ Go to the releases section and download the built version. I highly recommend us
 ```json
 {
     "TOKEN": "YOUR BOT TOKEN HERE",
-    "LESS_RATE_LIMIT": true,
     "PROXIES": true,
     "SPAM_PRN": true,
     "SERVER_NAME": "KDot better",
