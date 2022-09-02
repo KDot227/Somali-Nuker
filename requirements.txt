@@ -3,3 +3,4 @@ discord.py
 pystyle
 requests
 hmtai
+tqdm
