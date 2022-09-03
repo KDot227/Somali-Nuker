@@ -11,8 +11,9 @@ import requests
 from pystyle import *
 import sys
 import json
-import hmtai
 from tqdm import tqdm
+from colorama import Fore, init
+init(convert=True)
 
 __author__ = 'K.Dot#0001'
 __version__ = '1.0.0'
@@ -27,7 +28,6 @@ with open('config.json', 'r') as f:
     SERVER_NAME = config["SERVER_NAME"]
     SPAM_PRN = config["SPAM_PRN"]
     PROXIES = config["PROXIES"]
-    LESS_RATE_LIMIT = config["LESS_RATE_LIMIT"]
 
 
 
@@ -45,14 +45,32 @@ banner = Center.XCenter("""
 intents = discord.Intents.all() #enable all intents cause why not
 client = commands.Bot(command_prefix=PREFIX, intents=intents) #I fucking love intents
 client.remove_command('help') #help can smd
+list = f"""
+Bot token = {TOKEN}
+Channel names = {CHANNEL_NAMES}
+Message = {MESSAGE}
+Prefix = {PREFIX}
+Ammount of channels = {AMMOUNT_OF_CHANNELS}
+Server name = {SERVER_NAME}
+Spam PRN = {SPAM_PRN}
+Proxies = {PROXIES}
+
+=====COMMANDS=====
+
+{PREFIX}massdm - attempts to dm all members
+{PREFIX}ban_all - bans everyone
+{PREFIX}nuke - Nukes the server
+{PREFIX}kick_all - Kicks everyone
+"""
 
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='K.Dot#0001'))
     os.system('cls' if os.name == 'nt' else 'clear')
     os.system("title " + "Nuking with K.Dot#0001")
-    print(Colorate.Vertical(Colors.purple_to_red, banner, 2))
-    print(Colors.green + f"READY FOR NUKING\n\nSAY '{PREFIX}help' FOR HELP\n")
+    #print(Colorate.Vertical(Colors.purple_to_red, banner, 2))
+    print(f"{Fore.GREEN}{banner}")
+    print(list)
 
 
 @client.command()
@@ -124,205 +142,43 @@ async def kick_all(ctx): #will rate limit the bot
             asyncio.wait(.5)
     except:
         print(f'Failed to kick {member.name}')
-        
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def wave(ctx):
-	await ctx.send(hmtai.get("hmtai", "wave"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def tea(ctx):
-	await ctx.send(hmtai.get("hmtai", "tea"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def punch(ctx):
-	await ctx.send(hmtai.get("hmtai", "punch"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def poke(ctx):
-	await ctx.send(hmtai.get("hmtai", "poke"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def pat(ctx):
-	await ctx.send(hmtai.get("hmtai", "pat"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def kiss(ctx):
-	await ctx.send(hmtai.get("hmtai", "kiss"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def feed(ctx):
-	await ctx.send(hmtai.get("hmtai", "feed"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def hug(ctx):
-	await ctx.send(hmtai.get("hmtai", "hug"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def cuddle(ctx):
-	await ctx.send(hmtai.get("hmtai", "cuddle"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def cry(ctx):
-	await ctx.send(hmtai.get("hmtai", "cry"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def slap(ctx):
-	await ctx.send(hmtai.get("hmtai", "slap"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def lick(ctx):
-	await ctx.send(hmtai.get("hmtai", "lick"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def bite(ctx):
-	await ctx.send(hmtai.get("hmtai", "bite"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def dance(ctx):
-	await ctx.send(hmtai.get("hmtai", "dance"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def boop(ctx):
-	await ctx.send(hmtai.get("hmtai", "boop"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def sleep(ctx):
-	await ctx.send(hmtai.get("hmtai", "sleep"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def like(ctx):
-	await ctx.send(hmtai.get("hmtai", "like"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def kill(ctx):
-	await ctx.send(hmtai.get("hmtai", "kill"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def nosebleed(ctx):
-	await ctx.send(hmtai.get("hmtai", "nosebleed"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def threaten(ctx):
-	await ctx.send(hmtai.get("hmtai", "threaten"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def tickle(ctx):
-	await ctx.send(hmtai.get("hmtai", "tickle"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def depression(ctx):
-	await ctx.send(hmtai.get("hmtai", "depression"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def jahy_arts(ctx):
-	await ctx.send(hmtai.get("hmtai", "jahy_arts"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def neko_arts(ctx):
-	await ctx.send(hmtai.get("hmtai", "neko_arts"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def coffee_arts(ctx):
-	await ctx.send(hmtai.get("hmtai", "coffee_arts"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def wallpaper(ctx):
-	await ctx.send(hmtai.get("hmtai", "wallpaper"))
-@client.command()
-@commands.cooldown(1, 5, commands.BucketType.user)
-async def mobileWallpaper(ctx):
-	await ctx.send(hmtai.get("hmtai", "mobileWallpaper"))
-        
-@client.command()
-async def help(ctx):
-    embedVar = discord.Embed(title="Help Menu!", color=0x00ff00)
-    embedVar.set_thumbnail(url='https://cdn.discordapp.com/attachments/996976015970676910/1012856993561718795/damn_cover.jpg?size=4096')
-    embedVar.add_field(name="Instructions", value=f'''
-Different Help commands
-
-{PREFIX} nuke
-{PREFIX} ban_all
-{PREFIX} kick_all
-{PREFIX} massdm
-{PREFIX} SFW
-
-''', inline=True)
-    embedVar.set_footer(text = 'Made by K.Dot#0001')
-    await ctx.send(embed=embedVar)
-    
-@client.command()
-async def SFW(ctx):
-	embedVar = discord.Embed(title="god hmSFW", color=0x00ff00)
-	embedVar.set_thumbnail(url='https://cdn.discordapp.com/attachments/988338446802231297/993402633261953054/worms1.png')
-	embedVar.add_field(name="hmSFW", value='''
-god wave
-god tea
-god punch
-god poke
-god pat
-god kiss
-god feed
-god hug
-god cuddle
-god cry
-god slap
-god lick
-god bite
-god dance
-god boop
-god sleep
-god like
-god kill
-god nosebleed
-god threaten
-god tickle
-god depression
-god jahy_arts
-god neko_arts
-god coffee_arts
-god wallpaper
-god mobileWallpaper''', inline=True)
-	embedVar.set_footer(text = 'Made by K.Dot#0001')
-	embedVar.set_image(url='https://cdn.discordapp.com/attachments/994421993023750234/995126254149828649/81B4800E-1B06-44AE-834D-ADB3BD85DFDC.png')
-	await ctx.send(embed=embedVar)
 
 def spamhookp(hook):
-    for i in range(5):
-        for i in range(4):
-            if SPAM_PRN == True:
-                try:
-                    requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))}, proxies=proxy())
-                except:
-                    print(f'error spamming! {hook}')
-            else:
-                try:
-                    requests.post(hook, data={'content': MESSAGE}, proxies=proxy())
-                except:
-                    print(f'error spamming! {hook}')
-            if LESS_RATE_LIMIT == False:
-                continue
-            else:
-                time.sleep(0.2)
+    toot = 0
+    while toot < int(AMMOUNT_OF_CHANNELS):
+        if SPAM_PRN == True:
+            try:
+                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))}, proxies=proxy())
+                toot += 1
+            except:
+                print(f'error spamming! {hook}')
+                toot += 1
+        else:
+            try:
+                requests.post(hook, data={'content': MESSAGE}, proxies=proxy())
+                toot += 1
+            except:
+                print(f'error spamming! {hook}')
+                toot += 1
     sys.exit()
         
 def spamhook(hook):
-    for i in range(5):
-        for i in range(4):
-            if SPAM_PRN == True:
-                try:
-                    requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))})
-                except:
-                    print(f'error spamming! {hook}')
-            else:
-                try:
-                    requests.post(hook, data={'content': MESSAGE})
-                except:
-                    print(f'error spamming! {hook}')
-            if LESS_RATE_LIMIT == False:
-                continue
-            else:
-                time.sleep(0.2)
+    tootp = 0
+    while tootp < int(AMMOUNT_OF_CHANNELS):
+        if SPAM_PRN == True:
+            try:
+                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))})
+                tootp += 1
+            except:
+                print(f'error spamming! {hook}')
+                tootp += 1
+        else:
+            try:
+                requests.post(hook, data={'content': MESSAGE})
+                tootp += 1
+            except:
+                print(f'error spamming! {hook}')
+                tootp += 1
     sys.exit()
 
 if PROXIES == True:
