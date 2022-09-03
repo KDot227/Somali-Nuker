@@ -1,7 +1,7 @@
 {
     "TOKEN": "Bot_Token_Here",
     "PROXIES": false,
-    "SPAM_PRN": false,
+    "SPAM_PRN": true,
     "SERVER_NAME": "KDot better",
     "AMMOUNT_OF_CHANNELS": "30",
     "PREFIX": "god ",
