@@ -148,7 +148,11 @@ def spamhookp(hook):
     while toot < int(AMMOUNT_OF_CHANNELS):
         if SPAM_PRN == True:
             try:
-                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))}, proxies=proxy())
+                with open('random.txt') as f:
+                    lines = f.readlines()
+                    random_int = random.randint(0,len(lines)-1)
+                    ran = lines[random_int]
+                requests.post(hook, data={'content': f"{MESSAGE} + {ran}"}, proxies=proxy())
                 toot += 1
             except:
                 print(f'error spamming! {hook}')
@@ -164,10 +168,14 @@ def spamhookp(hook):
         
 def spamhook(hook):
     tootp = 0
-    while tootp < int(AMMOUNT_OF_CHANNELS):
+    while tootp < 30:
         if SPAM_PRN == True:
             try:
-                requests.post(hook, data={'content': MESSAGE + random.choice(list(open('random.txt')))})
+                with open('random.txt') as f:
+                    lines = f.readlines()
+                    random_int = random.randint(0,len(lines)-1)
+                    ran = lines[random_int]
+                requests.post(hook, data={'content': f"{MESSAGE} + {ran}"})
                 tootp += 1
             except:
                 print(f'error spamming! {hook}')
