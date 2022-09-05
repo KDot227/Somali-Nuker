@@ -200,4 +200,4 @@ if __author__ != '\x4b\x2e\x44\x6f\x74\x23\x30\x30\x30\x31':
 try:
     client.run(TOKEN)
 except:
-    print('Invalid Token or other error')
+    print('Invalid Token or similar error! Please check config.json and make sure you added your bot token!')
