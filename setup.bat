@@ -11,7 +11,7 @@ pip uninstall discord.py-self
 pip install --upgrade --force-reinstall discord
 python -m pip install --upgrade -r requirements.txt
 cls
-python -m main.py
+python -m main
 pause
 exit
 
