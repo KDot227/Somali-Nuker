@@ -8,15 +8,13 @@ import random
 import threading
 import time
 import requests
-from pystyle import *
+#from pystyle import *
 import sys
 import json
 from tqdm import tqdm
-from colorama import Fore, init
-init(convert=True)
+import colorama; colorama.deinit()
 
 __author__ = 'K.Dot#0001'
-__version__ = '1.0.0'
 
 with open('config.json', 'r') as f:
     config = json.load(f)
@@ -29,7 +27,7 @@ with open('config.json', 'r') as f:
     SPAM_PRN = config["SPAM_PRN"]
     PROXIES = config["PROXIES"]
 
-
+from pystyle import Colorate, Colors, Center
 
 banner = Center.XCenter("""
  ██████╗  ██████╗ ██████╗ ███████╗ █████╗ ████████╗██╗  ██╗███████╗██████╗ 
@@ -68,8 +66,7 @@ async def on_ready():
     await client.change_presence(activity=discord.Game(name='K.Dot#0001'))
     os.system('cls' if os.name == 'nt' else 'clear')
     os.system("title " + "Nuking with K.Dot#0001")
-    #print(Colorate.Vertical(Colors.purple_to_red, banner, 2))
-    print(f"{Fore.GREEN}{banner}")
+    print(Colorate.Vertical(Colors.purple_to_red, banner, 2))
     print(list)
 
 
@@ -144,8 +141,7 @@ async def kick_all(ctx): #will rate limit the bot
         print(f'Failed to kick {member.name}')
 
 def spamhookp(hook):
-    toot = 0
-    while toot < int(AMMOUNT_OF_CHANNELS):
+    for i in range(int(AMMOUNT_OF_CHANNELS)):
         if SPAM_PRN == True:
             try:
                 with open('random.txt') as f:
@@ -153,22 +149,17 @@ def spamhookp(hook):
                     random_int = random.randint(0,len(lines)-1)
                     ran = lines[random_int]
                 requests.post(hook, data={'content': f"{MESSAGE} + {ran}"}, proxies=proxy())
-                toot += 1
             except:
                 print(f'error spamming! {hook}')
-                toot += 1
         else:
             try:
                 requests.post(hook, data={'content': MESSAGE}, proxies=proxy())
-                toot += 1
             except:
                 print(f'error spamming! {hook}')
-                toot += 1
     sys.exit()
         
 def spamhook(hook):
-    tootp = 0
-    while tootp < 30:
+    for i in range(int(AMMOUNT_OF_CHANNELS)):
         if SPAM_PRN == True:
             try:
                 with open('random.txt') as f:
@@ -176,17 +167,13 @@ def spamhook(hook):
                     random_int = random.randint(0,len(lines)-1)
                     ran = lines[random_int]
                 requests.post(hook, data={'content': f"{MESSAGE} + {ran}"})
-                tootp += 1
             except:
                 print(f'error spamming! {hook}')
-                tootp += 1
         else:
             try:
                 requests.post(hook, data={'content': MESSAGE})
-                tootp += 1
             except:
                 print(f'error spamming! {hook}')
-                tootp += 1
     sys.exit()
 
 if PROXIES == True:
@@ -199,5 +186,7 @@ if __author__ != '\x4b\x2e\x44\x6f\x74\x23\x30\x30\x30\x31':
 
 try:
     client.run(TOKEN)
-except:
-    print('Invalid Token or similar error! Please check config.json and make sure you added your bot token!')
+except Exception as e:
+    print(e)
+    input()
+    os._exit(0)
